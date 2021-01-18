@@ -37,3 +37,15 @@
   min-height: 100vh;
   box-sizing: border-box;
 }
+
+.App-Button {
+  font-size: 18px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  background-color: #FF8A6B;
+  font-weight: bold;
+}
+
+.App-Button:focus {
+  outline: none;
+}
