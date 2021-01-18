@@ -41,11 +41,16 @@
 .App-Button {
   font-size: 18px;
   border-radius: 7px;
-  padding: 5px 10px;
+  padding: 10px 20px;
   background-color: #FF8A6B;
   font-weight: bold;
+  border: none;
 }
 
 .App-Button:focus {
   outline: none;
+}
+
+.App-Button:active {
+  background-color: #a75a45;
 }
