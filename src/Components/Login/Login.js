@@ -21,7 +21,7 @@ const Login = () => {
     }
 
     return (
-        <section className="logInContainer">
+        <Container type="section" className="logInContainer">
             <h2>LOG IN</h2>
             <Container type="form" className="logInForm">
                 <Input type="email" labelText={"Email"} autoFocus={true} placeholder={"Enter your email."} name="email" handleChange={handleChange} />
@@ -30,8 +30,8 @@ const Login = () => {
                     LOG IN
                 </Button>
             </Container>
-            
-        </section>
+
+        </Container>
     )
 }
 
