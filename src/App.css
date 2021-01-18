@@ -1,0 +1,23 @@
+.App {
+  min-height: 100vh;
+  background-color: #5CDB95;
+}
+
+.App.dark {
+  background-color: #282c34;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #05386B;
+  width: 100%;
+  box-sizing: border-box;
+  height: 10vh;
+  padding: 0 2em;
+}
+
+.App-header.dark {
+  color: #1786f5;
+}
