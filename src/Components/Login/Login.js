@@ -1,14 +1,15 @@
 import React from 'react';
 import Container from '../Reusable/Container/Container';
 import Input from '../Reusable/Input/Input';
+import '../../css/login/login.css';
 
 const Login = () => {
 
     return (
         <section className="logInContainer">
-            <h2>Log In</h2>
+            <h2>LOG IN</h2>
             <Container type="form" className="logInForm">
-                <Input type="email" labelText={"Email:"} />
+                <Input type="email" labelText={"Email"} autoFocus={true} placeholder={"Enter your email."} />
             </Container>
         </section>
     )

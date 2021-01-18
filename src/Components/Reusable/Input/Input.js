@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import '../../../css/reusableInput/input.css';
 
-const Input = ({ type, defaultValue="", labelText }) => {
+const Input = ({ type, defaultValue="", labelText, ...props }) => {
     const [ value, setValue ] = useState(defaultValue);
 
     const onChange = ( e ) => {
@@ -10,7 +11,7 @@ const Input = ({ type, defaultValue="", labelText }) => {
     return (
         <article className="inputContainer">
             <label>{labelText}</label>
-            <input type={type} value={value} onChange={onChange} />
+            <input type={type} value={value} onChange={onChange} {...props} />
         </article>
     )
 }

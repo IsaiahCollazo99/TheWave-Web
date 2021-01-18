@@ -1,0 +1,9 @@
+.logInContainer {
+    width: 15%;
+    margin: auto;
+    font-size: 18px;
+}
+
+.logInContainer h2 {
+    text-align: center;
+}
