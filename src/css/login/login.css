@@ -22,13 +22,9 @@
 }
 
 .logInContainer .inputContainer {
-    background-color: #EDF5E1;
     margin: 10px 0;
 }
 
-.logInContainer input {
-    background-color: #EDF5E1;
-}
 
 .logInContainer button {
     margin-top: 5px;
