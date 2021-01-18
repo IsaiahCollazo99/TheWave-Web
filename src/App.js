@@ -3,6 +3,11 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Login from './Components/Login/Login';
 
+// https://developers.soundcloud.com/
+// https://developer.apple.com/documentation/applemusicapi/
+// https://developers.google.com/youtube/v3
+// https://developer.pandora.com/
+
 function App() {
   return (
     <div className="App">

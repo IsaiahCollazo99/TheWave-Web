@@ -1,3 +1,8 @@
+/* Headline / Brand Color: #05386B */
+/* Background / Inner Container Color : #5CDB95 */
+/* Container Color: #EDF5E1 */
+/* Paragraph Color: ? #1786f5 ? */
+
 .App {
   min-height: 100vh;
   background-color: #5CDB95;
@@ -16,8 +21,19 @@
   box-sizing: border-box;
   height: 10vh;
   padding: 0 2em;
+  position: fixed;
 }
 
 .App-header.dark {
   color: #1786f5;
+}
+
+.App-Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }

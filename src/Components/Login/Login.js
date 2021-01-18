@@ -10,6 +10,7 @@ const Login = () => {
             <h2>LOG IN</h2>
             <Container type="form" className="logInForm">
                 <Input type="email" labelText={"Email"} autoFocus={true} placeholder={"Enter your email."} />
+                <Input type="password" labelText={"Password"} placeholder={"Enter your password."} />
             </Container>
         </section>
     )
