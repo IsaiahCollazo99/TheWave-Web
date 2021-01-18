@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Container from '../Reusable/Container/Container';
+import SUPage1 from './SUPage1';
 
 const defaultValues = {
     email: "", 
@@ -39,6 +40,7 @@ const SignUp = () => {
     return (
         <Container type="section" className="signUpContainer">
             <h2>SIGN UP</h2>
+            {page === 1 ? <SUPage1 handleChange={handleChange} /> : null}
         </Container>
     )
 }
