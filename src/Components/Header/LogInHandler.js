@@ -1,9 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const LogInHandler = () => {
     return (
         <>
-        <button className="logInHandler">Log In</button>
+        <NavLink to="/login" className="logInHandler">Log In</NavLink>
         </>
     )
 }
