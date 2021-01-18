@@ -2,6 +2,7 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header/Header';
 import Login from './Components/Login/Login';
+import SignUp from './Components/SignUp/SignUp';
 
 // https://developers.soundcloud.com/
 // https://developer.apple.com/documentation/applemusicapi/
@@ -16,6 +17,10 @@ function App() {
         <main className="App-Main">
           <Route path="/login">
             <Login />
+          </Route>
+
+          <Route path="/register">
+            <SignUp />
           </Route>
         </main>
     </div>
