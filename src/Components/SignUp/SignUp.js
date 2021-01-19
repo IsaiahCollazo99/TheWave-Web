@@ -16,7 +16,8 @@ const defaultValues = {
 const SignUp = () => {
     const [ values, setValues ] = useState({...defaultValues});
 
-    const handleSignUp = () => {
+    const handleSignUp = ( e ) => {
+        e.preventDefault();
         console.log(values);
     }
 
