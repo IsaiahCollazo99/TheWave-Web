@@ -1,0 +1,25 @@
+.signUpContainer {
+    width: 25%;
+    font-size: 18px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 75vh;
+    align-items: center;
+}
+
+.signUpContainer h2 {
+    margin: 0;
+    color: #05386B;
+}
+
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: none;
+    height: 85%;
+    width: 75%;
+}

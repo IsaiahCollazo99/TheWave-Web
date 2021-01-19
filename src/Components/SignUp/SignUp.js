@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import Button from '../Reusable/Button/Button';
 import Container from '../Reusable/Container/Container';
-import SUPage1 from './SUPage1';
+import Input from '../Reusable/Input/Input';
+import '../../css/signup/signup.css';
 
 const defaultValues = {
     email: "", 
@@ -13,7 +15,6 @@ const defaultValues = {
 
 const SignUp = () => {
     const [ values, setValues ] = useState({...defaultValues});
-    const [ page, setPage ] = useState(1);
 
     const handleSignUp = () => {
         console.log(values);
@@ -23,24 +24,26 @@ const SignUp = () => {
         setValues(prevState => {
             const newValues = {...prevState};
             newValues[inputName] = value;
+            return newValues;
         })
-    }
-
-    const handlePageChange = () => {
-        if(page === 1) setPage(2);
-        else if(page === 2) setPage(1);
-    }
-
-    const handleSubmit = ( e ) => {
-        e.preventDefault();
-        if(page === 1) handlePageChange();
-        else handleSignUp();
     }
 
     return (
         <Container type="section" className="signUpContainer">
             <h2>SIGN UP</h2>
-            {page === 1 ? <SUPage1 handleChange={handleChange} /> : null}
+
+            <Container type="form" className="signUpForm" onSubmit={handleSignUp}>
+                <Input type="email" labelText="Email" handleChange={handleChange} placeholder="Enter your email" name="email" />
+                <Input type="password" labelText="Password" handleChange={handleChange} placeholder="Enter a password" name="password" />
+                <Input type="password" labelText="Confirm Password" handleChange={handleChange} placeholder="Re-Enter your password" name="confirmPassword" />
+                <Input type="text" labelText ="Username" handleChange={handleChange} placeholder="Enter a username" name="username" />
+                <Input type="text" labelText ="First Name" handleChange={handleChange} placeholder="Enter your first name" name="firstName" />
+                <Input type="text" labelText ="Last Name" handleChange={handleChange} placeholder="Enter your last name" name="lastName" />
+
+                <Button type="submit" onClick={handleSignUp}>
+                    SIGN UP
+                </Button>
+            </Container>
         </Container>
     )
 }
