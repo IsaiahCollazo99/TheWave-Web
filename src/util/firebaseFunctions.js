@@ -3,6 +3,8 @@ import app from 'firebase/app';
 import "firebase/database"
 // import { storage } from 'firebase';
 
+const database = app.database();
+
 firebase.auth().useDeviceLanguage();
 
 export const firebaseLogOut = () => firebase.auth().signOut();
@@ -32,9 +34,10 @@ export const firebaseIsEmailExisting = async ( email ) => {
     }
 }
 
-export const writeUserData = ( userId, name, email, imageUrl ) => {
-    
+export const writeUserData = ( userId, username, email, full_name ) => {
+    database.ref("users/" + userId).set({
+        username,
+        email,
+        full_name
+    })
 }
-
-// const database = app.database();
-// console.log(database);
