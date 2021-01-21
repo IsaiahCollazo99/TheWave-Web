@@ -3,6 +3,7 @@ import Button from '../Reusable/Button/Button';
 import Container from '../Reusable/Container/Container';
 import Input from '../Reusable/Input/Input';
 import '../../css/signup/signup.css';
+import { firebaseSignUp } from '../../util/firebaseFunctions';
 
 const defaultValues = {
     email: "", 
@@ -19,6 +20,7 @@ const SignUp = () => {
     const handleSignUp = ( e ) => {
         e.preventDefault();
         console.log(values);
+        firebaseSignUp();
     }
 
     const handleChange = ( value, inputName ) => {

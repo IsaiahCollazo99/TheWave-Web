@@ -1,4 +1,6 @@
 import firebase from '../firebase';
+import app from 'firebase/app';
+import "firebase/database"
 // import { storage } from 'firebase';
 
 firebase.auth().useDeviceLanguage();
@@ -29,3 +31,10 @@ export const firebaseIsEmailExisting = async ( email ) => {
         throw error;
     }
 }
+
+export const writeUserData = ( userId, name, email, imageUrl ) => {
+    
+}
+
+// const database = app.database();
+// console.log(database);
