@@ -13,11 +13,21 @@ export const firebaseLogIn = (email, password) => {
 	return firebase.auth().signInWithEmailAndPassword(email, password);
 }
 
-export const firebaseSignUp = async ( email, password, displayName ) => {
+export const firebaseSignUp = async ( userData ) => {
+    const {
+        email,
+        password,
+        username,
+        firstName,
+        lastName
+    } = userData;
+    const fullName = firstName + lastName;
+
     const { user } = await firebase.auth().createUserWithEmailAndPassword(email, password);
     await user.updateProfile({
-        displayName
+        displayName: username
     })
+    console.log(await writeUserData(user, fullName));
     return user;
 }
 
@@ -34,8 +44,14 @@ export const firebaseIsEmailExisting = async ( email ) => {
     }
 }
 
-export const writeUserData = ( userId, username, email, full_name ) => {
-    database.ref("users/" + userId).set({
+export const writeUserData = async ( userData, full_name ) => {
+    const {
+        email,
+        displayName: username,
+        uid
+    } = userData;
+
+    return await database.ref("users/" + uid).set({
         username,
         email,
         full_name

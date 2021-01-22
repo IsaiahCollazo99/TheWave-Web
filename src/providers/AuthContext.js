@@ -11,27 +11,6 @@ const AuthProvider = ({ children }) => {
 	const [token, setToken] = useState(null);
 	const [loading, setLoading] = useState(true);
 
-	const getUserCall = async ( backOffTime = 1 ) => {
-		try {
-			if(currentUser) {
-				if(!currentUser.first_name) {
-					let data = {};
-					// const data = await getUserById(currentUser.id);
-					setCurrentUser({...currentUser, ...data});
-				}
-			}
-		} catch ( error ) {
-			setTimeout(async () => {
-				await getUserCall(backOffTime * 2);
-			}, backOffTime * 1000);
-		}
-	}
-
-	useEffect(() => {
-		getUserCall();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [currentUser])
-
 	const updateUser = async (user) => {
 		if (user) {
 			// Add a time checker. Throw an error if it's taking too long

@@ -19,8 +19,7 @@ const SignUp = () => {
 
     const handleSignUp = ( e ) => {
         e.preventDefault();
-        console.log(values);
-        firebaseSignUp();
+        firebaseSignUp(values);
     }
 
     const handleChange = ( value, inputName ) => {
