@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../css/header/header.css'
+import LogInHandler from './LogInHandler'
 
 const Header = () => {
     return (
@@ -9,7 +10,7 @@ const Header = () => {
           </section>
 
           <section className="App-hr">
-            
+            <LogInHandler />
           </section>
         </header>
     )

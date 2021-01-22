@@ -3,6 +3,7 @@ import Container from '../Reusable/Container/Container';
 import Input from '../Reusable/Input/Input';
 import '../../css/login/login.css';
 import Button from '../Reusable/Button/Button';
+import { firebaseLogIn } from '../../util/firebaseFunctions';
 
 const Login = () => {
     const [ values, setValues ] = useState({email: "", password: ""});
@@ -17,7 +18,7 @@ const Login = () => {
 
     const handleLogIn = ( e ) => {
         e.preventDefault();
-        console.log(values);
+        firebaseLogIn(values.email, values.password);
     }
 
     return (
