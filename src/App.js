@@ -1,8 +1,9 @@
-import { Route } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header/Header';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
+import { AuthRoute } from './util/routesUtil';
 
 // https://developers.soundcloud.com/
 // https://developer.apple.com/documentation/applemusicapi/
@@ -15,13 +16,13 @@ function App() {
         <Header />
 
         <main className="App-Main">
-          <Route path="/login">
+          <AuthRoute path="/login">
             <Login />
-          </Route>
+          </AuthRoute>
 
-          <Route path="/register">
+          <AuthRoute path="/register">
             <SignUp />
-          </Route>
+          </AuthRoute>
         </main>
     </div>
   );
