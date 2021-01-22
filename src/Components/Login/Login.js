@@ -4,6 +4,7 @@ import Input from '../Reusable/Input/Input';
 import '../../css/login/login.css';
 import Button from '../Reusable/Button/Button';
 import { firebaseLogIn } from '../../util/firebaseFunctions';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [ values, setValues ] = useState({email: "", password: ""});
@@ -31,6 +32,8 @@ const Login = () => {
                     LOG IN
                 </Button>
             </Container>
+
+            <Link to="/register" className="signUpSwitch">Don't have an account? Sign up.</Link>
 
         </Container>
     )
