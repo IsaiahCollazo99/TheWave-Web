@@ -1,6 +1,7 @@
-// import { Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header/Header';
+import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import { AuthRoute } from './util/routesUtil';
@@ -11,6 +12,7 @@ import { AuthRoute } from './util/routesUtil';
 // https://developer.pandora.com/
 
 function App() {
+
   return (
     <div className="App">
         <Header />
@@ -23,6 +25,10 @@ function App() {
           <AuthRoute path="/register">
             <SignUp />
           </AuthRoute>
+
+          <Route path="/" exact>
+            <Home />
+          </Route>
         </main>
     </div>
   );
